@@ -4,14 +4,14 @@
     justify-content: center;
     align-items: center;
     width: 1440px;
-    height: 2844px;
 }
 /* Шапка */
 
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 92px 50px;
+    padding-top: 91px;
+    padding-bottom: 92px;
 }
 
 .header__menu {
@@ -61,7 +61,7 @@
     line-height: 24.3px;
 }
 
-.address__header {
+.address__hd-text { /*класс для класса в шапке*/
     margin-left: auto; 
     padding-top: 1px;
     padding-left: 2px;
@@ -72,8 +72,8 @@
     background-image: url(../images/cover.jpg);
     background-size: cover;
     background-position: center;
+    z-index: 0;
     width: 1440px;
-    height: 757px;
     min-height: 757px;
 }
 
@@ -93,6 +93,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
 }
 
 .aligned-text {
@@ -142,6 +143,7 @@
     width: 100%;
     padding-top: 135px;
     padding-left: 33px;
+    padding-bottom: 50px;
     color: #FFF;
     font-size: 22px;
     font-weight: 400;
@@ -151,14 +153,13 @@
 .cover__description-text {
     line-height: 28px;
     padding-left: 343px;
-    word-spacing: 17px;
-    
+    word-spacing: 17px;   
 }
 
 .bet-button {
     color: #FFF;
     text-align: center;
-    font-family: Raleway;
+    font-family: 'Raleway', Arial, sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -177,8 +178,7 @@
 .lots {
     width: 1340px;
     height: 478px;  
-    margin: 180px 50px 236px 50px;
-
+    margin: 160px 50px 236px 50px;
 }
 
 .lots__heading { /*заголовок*/
@@ -190,7 +190,7 @@
     text-transform: uppercase;
 }
 
-.lots__card-lis { /* список карточек*/
+.lots__card-list { /* список карточек*/
     position: relative;
     display: flex;
     flex-direction: row;
@@ -231,34 +231,29 @@
     align-items: center;
     position: relative;
     width: 430px;
-    height: 450px;  
+    height: 450px;
+    flex-grow: 1;
+    z-index: 2;  
 }
 
 .card_type_film { /*карточка с фильмом */
     background-image: url(../images/card-lot-01.jpg);   
     position: relative;
-    background-size: cover;
-    flex-grow: 1;
-    z-index: 2;
+    background-size: cover;   
 }
     
 
 .card_type_book { /*карточка с книгой*/
     position: relative;
     background-image: url(../images/card-lot-02.jpg);
-    background-size: cover;
-    flex-grow: 1;
-    z-index: 2;
+    background-size: cover;   
 }
 
 
 .card_type_picture { /*карточка с картиной*/
     position: relative;
     background-image:  url(../images/card-lot-03.jpg);
-    background-size: cover;
-    z-index: 2;
-    flex-grow: 1;
-    
+    background-size: cover; 
 }
 
 
@@ -271,22 +266,17 @@
     font-weight: 400;
 }
 
-
-
-
 .about { /*об аукционе*/
-    font-family: Raleway;
+    font-family: 'Raleway', Arial, sans-serif;
     font-style: normal;
     line-height: normal;
     width: 1340px;
-    height: 487px;
+    padding-top: 20px;
 }
 
 .about__column { /*колонки*/
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
+    grid-template-rows: auto;
 }
 
 .about__logo { /*контейнер c логотипом*/
@@ -309,13 +299,13 @@
 }
 
 .about__text-column { /*добавил класс для контейнера с текстом*/
-    display: grid;
-    width: 885px;
-    height: 388px;
-    justify-content: center;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
     padding-top: 147px;
-    column-gap: 100px;
+    padding-left: 120px;
+    grid-column: 2/2;
+    font-weight: 400;
+    font-size: 20px;   
 }
 
 .about__title { /*заголовок*/
@@ -328,36 +318,18 @@
     text-transform: uppercase;    
 }
 
-.about__text { /*текст*/
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.first__paragraph { /*добавил класс для 1 абзаца*/
-    grid-column: 2/2;
-    grid-row: 2/3;
+.about__text:nth-child(even) { /*текст*/
     width: 885px;
-    height: 96px;
-    padding-top: 146px;
-    padding-bottom: 122px;
-}
-
-.second__paragraph { /*добавил класс для 2 абзаца*/
     grid-column: 2/2;
-    grid-row: 3/3;
-    width: 885px;
-    height: 119px;
+    margin-bottom: 25px;
+    margin-top: 100px;
 }
 
 .footer { /*подвал*/
     display: flex;
     width: 1440px;
     column-gap: 315px;
-    padding: 227px 50px 90px 50px;
-}
-
-.address__footer { /*стили для подвала*/
-
+    padding: 184px 50px 90px 50px;
 }
 
 .footer__menu { /*навигация*/

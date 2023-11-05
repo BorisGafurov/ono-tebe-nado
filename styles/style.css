@@ -179,8 +179,7 @@
 /* карточки */
 .lots {
     width: 1340px;
-    height: 478px;  
-    margin: 160px 50px 236px 50px;
+    margin: 160px 50px 117px 50px;
 }
 
 .lots__heading { /*заголовок*/
